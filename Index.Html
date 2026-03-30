@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>For My Love</title>
+  <style>
+    body {
+      background: linear-gradient(to right, #ff9a9e, #fad0c4);
+      font-family: 'Arial', sans-serif;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      text-align: center;
+      color: #fff;
+      margin: 0;
+    }
+
+    h1 {
+      font-size: 2.5em;
+      margin-bottom: 50px;
+    }
+
+    button {
+      background-color: #fff;
+      color: #ff6f91;
+      border: none;
+      padding: 15px 30px;
+      font-size: 1.2em;
+      border-radius: 30px;
+      cursor: pointer;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    button:hover {
+      transform: scale(1.1);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+    }
+
+    .message {
+      margin-top: 30px;
+      max-width: 600px;
+      font-size: 1.2em;
+      background: rgba(255,255,255,0.2);
+      padding: 20px;
+      border-radius: 15px;
+      opacity: 0;
+      transform: translateY(50px);
+      transition: all 1s ease;
+    }
+
+    .message.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Hey Beautiful 💖</h1>
+  <button id="showButton">Click Me!</button>
+
+  <div id="sweetMessage" class="message">
+    Every moment with you feels magical.<br>
+    You make my heart race, my days brighter, and my life happier.<br>
+    I promise to always care for you, love you deeply, and cherish every second we share together.
+  </div>
+
+  <script>
+    // Ambil button dan mesej
+    const button = document.getElementById('showButton');
+    const message = document.getElementById('sweetMessage');
+
+    // Bila button ditekan
+    button.addEventListener('click', () => {
+      message.classList.add('show');
+      button.disabled = true; // button boleh disable supaya tak tekan berkali
+      button.style.opacity = 0.6; // nampak tak aktif
+    });
+  </script>
+
+</body>
+</html>
